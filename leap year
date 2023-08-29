@@ -1,0 +1,81 @@
+#include<stdio.h>
+#include<conio.h>
+int stack[100],i,j,choice=0,n,top=-1;
+void push();
+void pop();
+void show();
+void main();
+{
+printf("enter the number of elements in the stack:");
+scanf("%d",&n);
+printf("********stack operations using array*******");
+
+while(choice!=4)
+{
+printf("chose one from the below options..\n");
+printf("\n 1.push\n2.pop\n3.show\n4.exit");
+printf("\n enter your choice\n");
+scanf("%d",&choice);
+switch(choice)
+{
+case1:
+{
+push();
+break;
+}
+case2:
+pop();
+break;
+
+case3:
+show();
+break;
+
+case4:
+exit(0);
+
+default:
+printf("\n invalid choice");
+}
+}
+}
+void push()
+{
+int x;
+if(top == size-1)
+{
+printf("\n over flow");
+}
+else
+{
+printf("\n enter the element to be added into the stack:");
+scanf("%d",&x);
+top=top+1;
+inp_array[top]=x;
+}
+}
+void pop()
+{
+if (top == -1)
+{
+printf("\n underflow"):
+}
+else
+{
+printf("\n popped element: %d",inp_array[top]);
+top=top-1;
+}
+}
+void show()
+{
+if (top ==-1)
+{
+printf("\n underflow");
+}
+else
+{
+printf("\n element present in the stack: \n");
+for (int i=top;i>=0;--i)
+printf("%d\n",inp_array[i]);
+}
+}
